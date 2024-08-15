@@ -28,7 +28,8 @@ ul,
 ol,
 li,
 blockquote,
-fieldset {
+fieldset,
+input {
   margin: 0;
   padding: 0;
   border: none;
@@ -41,6 +42,16 @@ ol {
 
 a {
   text-decoration: none;
+}
+/*pattern visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .content {
@@ -56,7 +67,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  row-gap: 18px;
+  row-gap: 16px;
 }
 
 .result__video-container {
@@ -68,12 +79,75 @@ a {
 .result__video {
   width: 100%;
   height: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
+  height: 54px;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  margin-right: 1px;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  margin: 2px 2px;
+  opacity: 0;
+}
+
+.search-form__label
+.search-form__checkbox:checked
++ .search-form__pseudo-checkbox::before {
+  opacity: 1;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  height: 27px;
+  width: 244px;
+  appearance: none;
+
+  &::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .content__details {
@@ -135,6 +209,34 @@ a {
   height: 103px;
 }
 
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  max-height: 34px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  padding: 6px 73px;
+}
+
 .more-button {
   width: 100%;
+  padding: 6px 144px;
 }
+
+
+
+
+
+
+
+
+
+
