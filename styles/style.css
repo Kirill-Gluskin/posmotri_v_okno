@@ -60,7 +60,6 @@ a {
   height: 534px;
   column-gap: 30px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .result {
@@ -154,7 +153,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .title {
@@ -171,6 +170,7 @@ a {
 
 .content__list {
   position: relative;
+  overflow-y: auto;
 }
 
 .content__list-item {
@@ -184,6 +184,7 @@ a {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .content__video-card-description-container {
@@ -205,8 +206,8 @@ a {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  max-width: 194px;
+  height: auto;
 }
 
 .button {
@@ -228,7 +229,7 @@ a {
 
 .more-button {
   width: 100%;
-  padding: 6px 144px;
+  padding: 6px 75px;
 }
 
 
