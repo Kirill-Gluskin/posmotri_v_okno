@@ -87,6 +87,7 @@ a {
 .search-form {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: flex-start;
 }
 
@@ -110,13 +111,28 @@ a {
   gap: 5px;
 }
 
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__textfield {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
+  color: inherit;
   width: 225px;
   height: 27px;
-  color: inherit;
   background-color: transparent;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
