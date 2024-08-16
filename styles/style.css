@@ -184,6 +184,23 @@ a {
   cursor: pointer;
   padding: 2px 5px;
 }
+/*common state for buttons*/
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
 
 .search-form__submit-button {
   align-self: end;
@@ -225,6 +242,22 @@ a {
   display: block;
   padding: 2px 2px 4px;
   color: #ffffff;
+}
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
 }
 
 .content__card-link_current {
