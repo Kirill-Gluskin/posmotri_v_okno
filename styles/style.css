@@ -229,8 +229,10 @@ a {
 
 .content__list {
   position: relative;
+  width: 399px;
   height: 298px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .content__list-item:not(:last-child) {
