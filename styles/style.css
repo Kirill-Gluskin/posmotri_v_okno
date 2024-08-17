@@ -60,8 +60,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 30px;
-  height: 800px;
-  padding: 133px 30px;
+  padding: 10px 10px;
 }
 
 .result {
@@ -73,7 +72,7 @@ a {
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  inline-size: 711px;
   height: 386px;
 }
 
@@ -102,7 +101,7 @@ a {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: normal;
 }
 
 .search-form__label {
@@ -131,8 +130,9 @@ a {
   font-size: 18px;
   font-weight: 400;
   color: inherit;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  width: 100%;
+  min-height: 27px;
   background-color: transparent;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
@@ -150,18 +150,18 @@ a {
 .search-form__pseudo-checkbox {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   border: 1px solid #ffffff;
-  padding: 2px;
+  padding: 1px;
 }
 
 .search-form__pseudo-checkbox::before {
   content: "";
   position: relative;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   background-color: #ffffff;
   opacity: 0;
 }
@@ -176,7 +176,7 @@ a {
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: normal;
   text-align: center;
   color: inherit;
   border: 1px solid #ffffff;
@@ -218,9 +218,9 @@ a {
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-block-end: 26px;
 }
 
 .content__accent {
@@ -269,6 +269,8 @@ a {
 .content__video-card {
   display: flex;
   gap: 5px;
+  /*display: grid;*/
+  /*grid-template-columns: auto 194px;*/
 }
 
 .content__video-card-description-container {
@@ -280,16 +282,18 @@ a {
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 100%;
   text-transform: uppercase;
-  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin-bottom: 6px;
 }
 
 .content__video-card-description {
   font-size: 18px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 90%;
 }
 
 .content__video-card-thumbnail {
